@@ -1,6 +1,6 @@
 # Definitions: what each series in the database counts
 
-How each source in the database defines and counts homicide, compared with the UNODC definition of intentional homicide. Every statement gives the page or file it comes from. Built from global_master_panel.csv (29,075 rows, 25 layers).
+How each source in the database defines and counts homicide, compared with the UNODC definition of intentional homicide. Where a statement rests on a specific page or file, its address is given next to it; the sources of every layer are listed under its table. Built from global_master_panel.csv (29,075 rows, 25 layers).
 
 ## 1. Reference definition: UNODC / ICCS 0101
 
@@ -126,8 +126,8 @@ Sources: [SAPS crime statistics](https://www.saps.gov.za/services/crimestats.php
 
 | Element | Treatment | What the source says | |
 |---|---|---|---|
-| Murder: completed intentional killing | counted | 3,219 cases nationally in 2017. |  |
-| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | counted | 'Man slaughter' (120 cases nationally) is added to murder; whether it is voluntary or involuntary is not stated. |  |
+| Murder: completed intentional killing | counted | 3,219 cases nationally in 2017. | see the sources below |
+| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | counted | 'Man slaughter' (120 cases nationally) is added to murder; whether it is voluntary or involuntary is not stated. | see the sources below |
 | Attempted killings (ICCS: separate category, excluded) | not counted | Attempted Murder is a column of its own in the NBS state tables of offences against persons. | [source](https://nigerianstat.gov.ng/download/786) |
 | Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not stated | The list of offences against persons has no column for negligent or traffic deaths. Whether the 'Man Slaughter' column contains negligent killings is not stated. | [source](https://nigerianstat.gov.ng/download/786) |
 | Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not counted | Suicide and Attempted Suicide are columns of their own. The NBS description of offences against persons also names infanticide and concealment of birth, but the state tables give them no column, so where they are recorded is not stated. | [source](https://nigerianstat.gov.ng/download/786) |
@@ -151,8 +151,8 @@ Sources: [NBS, Crime Statistics 2017](https://nigerianstat.gov.ng/resource/CRIME
 
 | Element | Treatment | What the source says | |
 |---|---|---|---|
-| Murder: completed intentional killing | counted | 2,263 people murdered in 2,193 cases in 2024. |  |
-| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | partly counted | The report lists 'manslaughter' (25 in 2024) among the reasons for the killings it counts, so the table includes some killings the police classify as manslaughter. |  |
+| Murder: completed intentional killing | counted | 2,263 people murdered in 2,193 cases in 2024. | see the sources below |
+| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | partly counted | The report lists 'manslaughter' (25 in 2024) among the reasons for the killings it counts, so the table includes some killings the police classify as manslaughter. | see the sources below |
 | Attempted killings (ICCS: separate category, excluded) | not stated | The report lists murder, rape, unnatural offences and human trafficking in the category of offences against persons; no attempted-murder line is named. | [source](https://www.nbs.go.tz/uploads/statistics/documents/en-1744876106-Crime%20and%20Traffic%20Incidents%20Statistics%20%20January%20-%20December%202024.pdf) |
 | Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not counted | Road traffic deaths are tabulated in a separate chapter of the same report (accidents, deaths and injured). Other negligent killings are not addressed. | [source](https://www.nbs.go.tz/uploads/statistics/documents/en-1744876106-Crime%20and%20Traffic%20Incidents%20Statistics%20%20January%20-%20December%202024.pdf) |
 | Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not stated | Suicide and abortion are not named among the offences against persons the report lists. | [source](https://www.nbs.go.tz/uploads/statistics/documents/en-1744876106-Crime%20and%20Traffic%20Incidents%20Statistics%20%20January%20-%20December%202024.pdf) |
@@ -175,10 +175,10 @@ Sources: [NBS, Crime statistics reports](https://www.nbs.go.tz/statistics/topic/
 
 | Element | Treatment | What the source says | |
 |---|---|---|---|
-| Murder: completed intentional killing | counted | 944 cases nationally in 2022. |  |
-| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | not counted | 'Culpable homicide' is reported as its own category among the general cases (50 in 2019). |  |
-| Attempted killings (ICCS: separate category, excluded) | not counted | 'Attempted murder' is a separate line (298 in 2022). |  |
-| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not counted | Culpable homicide is separate. |  |
+| Murder: completed intentional killing | counted | 944 cases nationally in 2022. | see the sources below |
+| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | not counted | 'Culpable homicide' is reported as its own category among the general cases (50 in 2019). | see the sources below |
+| Attempted killings (ICCS: separate category, excluded) | not counted | 'Attempted murder' is a separate line (298 in 2022). | see the sources below |
+| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not counted | Culpable homicide is separate. | see the sources below |
 | Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not counted | The serious-case categories are armed robbery, assault with intent to cause grievous bodily harm, attempted murder, car theft, fraud, house breaking, human trafficking, murder, robbery, sexual offence and stock theft; there is none for suicide or abortion. | [source](https://publiceyenews.com/2021/07/26/lesotho-tops-global-murder-rankings/) |
 | Legal intervention, justifiable homicide (ICCS: excluded) | not stated | The Bureau's report classifies the police's reported cases and does not discuss legal intervention. | [source](https://www.bos.gov.ls/BoS_reports/Copy%20of%20Demography/2022_Crime_Statistics_report.pdf) |
 
@@ -200,11 +200,11 @@ Sources: [BOS crime statistics reports](https://www.bos.gov.ls/BoS_reports/Copy%
 
 | Element | Treatment | What the source says | |
 |---|---|---|---|
-| Murder: completed intentional killing | counted | Murder was 61.5% of the category in 2021 (2,018 of 3,281) and 70.4% in 2017. |  |
-| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | counted | Manslaughter is a component (72 in 2021). |  |
+| Murder: completed intentional killing | counted | Murder was 61.5% of the category in 2021 (2,018 of 3,281) and 70.4% in 2017. | see the sources below |
+| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | counted | Manslaughter is a component (72 in 2021). | see the sources below |
 | Attempted killings (ICCS: separate category, excluded) | not stated | Attempted murder is not among the components the NPS and the NCRC list for the Homicide category (murder, manslaughter, infanticide, procuring abortion, concealing birth, suicide, causing death by dangerous driving). | [source](https://www.the-star.co.ke/news/2025-12-11-factors-most-likely-to-cost-you-your-life-report) |
-| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | counted | Causing death by dangerous driving (389 of 3,281 in 2021). |  |
-| Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | counted | Suicide (658 in 2021), procuring abortion (32) and concealing birth (70). Infanticide (42) is also in the category but the ICCS includes infanticide. |  |
+| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | counted | Causing death by dangerous driving (389 of 3,281 in 2021). | see the sources below |
+| Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | counted | Suicide (658 in 2021), procuring abortion (32) and concealing birth (70). Infanticide (42) is also in the category but the ICCS includes infanticide. | see the sources below |
 | Legal intervention, justifiable homicide (ICCS: excluded) | not stated | The NPS reports and the NCRC study do not discuss legal intervention or justified killings. | [source](https://www.the-star.co.ke/news/2025-12-11-factors-most-likely-to-cost-you-your-life-report) |
 
 - The county figure cannot be split into murder and the rest; the national composition of the year is written into every row.
@@ -226,16 +226,16 @@ Sources: [NPS annual crime reports](https://nationalpolice.go.ke/reports-0); [KN
 - Counted unit: cases. A count per city or state and year: police-recorded rows count cases (whether cases or victims depends on the cited source) and health-registry rows count deaths (322 rows in 4 countries).
 - Time reference: Calendar year.
 - Verdict against the reference: **Undetermined**. A mix of police-recorded cases and health-registry deaths with the definitions of each source; never tier A.
-- In the database: 11,282 rows, 931 units (admin1, city), 2000-2024; reliability tiers B 10,905, C 377; count unit in the panel: cases, deaths; definition flags in the rows: none
+- In the database: 11,282 rows, 931 units (admin1, city), 2000-2024; reliability tiers B 10,425, C 857; count unit in the panel: cases, deaths; definition flags in the rows: none
 
 | Element | Treatment | What the source says | |
 |---|---|---|---|
-| Murder: completed intentional killing | not stated | The layer states no definition: each row follows the definition of the source it cites (fields igarape_source_1 and igarape_source_2). |  |
-| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | not stated | The layer states no definition: each row follows the definition of the source it cites (fields igarape_source_1 and igarape_source_2). |  |
-| Attempted killings (ICCS: separate category, excluded) | not stated | The layer states no definition: each row follows the definition of the source it cites (fields igarape_source_1 and igarape_source_2). |  |
-| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not stated | The layer states no definition: each row follows the definition of the source it cites (fields igarape_source_1 and igarape_source_2). |  |
-| Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not stated | The layer states no definition: each row follows the definition of the source it cites (fields igarape_source_1 and igarape_source_2). |  |
-| Legal intervention, justifiable homicide (ICCS: excluded) | not stated | The layer states no definition: each row follows the definition of the source it cites (fields igarape_source_1 and igarape_source_2). |  |
+| Murder: completed intentional killing | not stated | The layer states no definition: each row follows the definition of the source it cites (fields igarape_source_1 and igarape_source_2). | see the sources below |
+| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | not stated | The layer states no definition: each row follows the definition of the source it cites (fields igarape_source_1 and igarape_source_2). | see the sources below |
+| Attempted killings (ICCS: separate category, excluded) | not stated | The layer states no definition: each row follows the definition of the source it cites (fields igarape_source_1 and igarape_source_2). | see the sources below |
+| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not stated | The layer states no definition: each row follows the definition of the source it cites (fields igarape_source_1 and igarape_source_2). | see the sources below |
+| Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not stated | The layer states no definition: each row follows the definition of the source it cites (fields igarape_source_1 and igarape_source_2). | see the sources below |
+| Legal intervention, justifiable homicide (ICCS: excluded) | not stated | The layer states no definition: each row follows the definition of the source it cites (fields igarape_source_1 and igarape_source_2). | see the sources below |
 
 - Rows whose cited source is an international aggregator (UNODC, Eurostat and similar) are excluded: they are national figures placed on a capital.
 - The `indicator_type` of every row says whether the cited source is a police/security body (police_recorded_cases) or a health/forensic body (health_registry_deaths); the table below counts them per country.
@@ -291,7 +291,7 @@ Sources: [Igarape Institute Homicide Monitor](https://homicide.igarape.org.br); 
 
 | Element | Treatment | What the source says | |
 |---|---|---|---|
-| Murder: completed intentional killing | counted |  |  |
+| Murder: completed intentional killing | counted | The series is the 'Murder' category of the Police Headquarters' crime statistics (murder cases filed). | see the sources below |
 | Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | not stated | The police crime categories published are murder, robbery, dacoity, speedy-trial cases, rioting, violence against women and children, kidnapping, assault on police, burglary, theft and others; none is culpable homicide. | [source](https://mail.morungexpress.com/crime-surge-grips-bangladesh-in-2025-women-and-children-worst-hit) |
 | Attempted killings (ICCS: separate category, excluded) | not stated | No attempted-murder category is named in the police headquarters' published list; where such cases are recorded is not stated. | [source](https://mail.morungexpress.com/crime-surge-grips-bangladesh-in-2025-women-and-children-worst-hit) |
 | Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not stated | No category for deaths by negligence is named in the published list. | [source](https://mail.morungexpress.com/crime-surge-grips-bangladesh-in-2025-women-and-children-worst-hit) |
@@ -317,10 +317,10 @@ Sources: [BBS Statistical Yearbook](https://bbs.gov.bd); [Prothom Alo on the pol
 
 | Element | Treatment | What the source says | |
 |---|---|---|---|
-| Murder: completed intentional killing | counted |  |  |
-| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | counted | HKPF's 'Homicide' is murder plus manslaughter. |  |
+| Murder: completed intentional killing | counted | The series is the source's own homicide category: 'Homicide' in the Hong Kong Police Force tables and the 杀人 line of the yearbooks. | see the sources below |
+| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | counted | HKPF's 'Homicide' is murder plus manslaughter. | see the sources below |
 | Attempted killings (ICCS: separate category, excluded) | not counted | The Hong Kong Year Book police appendix lists 'Attempted murder' as a line of its own next to 'Murder and manslaughter'. | [source](https://hkintexts.histsyn.com/page/1738795) |
-| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | partly counted | HKPF's own annual reviews note that the figure can include deaths from, for example, dangerous driving and industrial accidents. |  |
+| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | partly counted | HKPF's own annual reviews note that the figure can include deaths from, for example, dangerous driving and industrial accidents. | see the sources below |
 | Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not counted | The violent-crime lines of the police tables (rape, indecent assault, murder and manslaughter, attempted murder, wounding, serious assault, robbery and others) have none for suicide or abortion. | [source](https://hkintexts.histsyn.com/page/1738795) |
 | Legal intervention, justifiable homicide (ICCS: excluded) | not stated | The police tables and the Year Book notes do not discuss legal intervention. | [source](https://hkintexts.histsyn.com/page/1738795) |
 
@@ -422,9 +422,9 @@ Sources: [DOSM open data (data.gov.my)](https://data.gov.my); [DOSM, Crime Stati
 
 | Element | Treatment | What the source says | |
 |---|---|---|---|
-| Murder: completed intentional killing | counted |  |  |
+| Murder: completed intentional killing | counted | The series is the 'Murder' column of the provincial police reports. | see the sources below |
 | Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | not stated | The provincial police reports have no column for the other kinds of qatl (qatl-i-khata, qatl-bis-sabab, qatl shibh-i-amd); where such cases are recorded (possibly under Miscellaneous or the accident columns) is not stated, and the files carry no notes. | [source](https://www.pbs.gov.pk/social-statistics-2/) |
-| Attempted killings (ICCS: separate category, excluded) | not counted | The column is 'Murder', not 'attempted murder'. |  |
+| Attempted killings (ICCS: separate category, excluded) | not counted | The column is 'Murder', not 'attempted murder'. | see the sources below |
 | Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not counted | Every provincial report has a separate column for Traffic Accident (Sindh: Fatal Accident and Non-Fatal Accident). Other negligent killings are not addressed. | [source](https://www.pbs.gov.pk/social-statistics-2/) |
 | Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not counted | Suicide and Attempted Suicide (spelled 'Socide' in the files) are columns of their own. | [source](https://www.pbs.gov.pk/social-statistics-2/) |
 | Legal intervention, justifiable homicide (ICCS: excluded) | not stated | The files give no notes or definitions below the tables and do not discuss legal intervention. | [source](https://www.pbs.gov.pk/social-statistics-2/) |
@@ -497,7 +497,7 @@ Sources: [data.go.kr dataset 15084592](https://www.data.go.kr/data/15084592/file
 
 | Element | Treatment | What the source says | |
 |---|---|---|---|
-| Murder: completed intentional killing | counted |  |  |
+| Murder: completed intentional killing | counted | The series is 'Homicide, cases known to the police' of the statistical yearbook, taken to be the police item 故意殺人 (see the note below). | see the sources below |
 | Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | not counted | The police definition of violent crime lists serious injury, 'including injury resulting in death', as an offence type of its own, separate from intentional homicide. | [source](https://www.police.ntpc.gov.tw/dl-9331-e0879a53-b4b7-40f3-a5de-9d93c3c045b4.html) |
 | Attempted killings (ICCS: separate category, excluded) | not stated | The police definition says intentional homicide excludes negligent death and says nothing about attempts; the counts are 'cases occurred', which include late-reported cases. | [source](https://www.police.ntpc.gov.tw/dl-35693-3186acaf-9d42-4256-b052-6ca7c26c2770.html) |
 | Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not counted | The definition of violent crime reads 'intentional homicide (excluding negligent death)'. | [source](https://www.police.ntpc.gov.tw/dl-35693-3186acaf-9d42-4256-b052-6ca7c26c2770.html) |
@@ -522,10 +522,10 @@ Sources: [DGBAS statistical yearbook](https://www.dgbas.gov.tw); [New Taipei Cit
 
 | Element | Treatment | What the source says | |
 |---|---|---|---|
-| Murder: completed intentional killing | counted |  |  |
+| Murder: completed intentional killing | counted | The series is the 'Murder (reported)' count of the National Statistical Office. | see the sources below |
 | Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | not counted | The Royal Thai Police criminal statistics keep 'Manslaughter' as a line of its own next to murder. | [source](https://oja.go.th/TH/download/18472) |
 | Attempted killings (ICCS: separate category, excluded) | not counted | 'Attempted murder/homicide' is a separate line of the police statistics (several thousand cases a year, more than the murder line). | [source](https://oja.go.th/TH/download/18472) |
-| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not counted | 'Negligent Homicide' is a separate crime and is excluded. |  |
+| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not counted | 'Negligent Homicide' is a separate crime and is excluded. | see the sources below |
 | Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not stated | The sources list murder, attempted murder, homicide, manslaughter, assault and rape among the offences against life, body and sex; suicide and abortion are not named. | [source](https://oja.go.th/TH/download/18472) |
 | Legal intervention, justifiable homicide (ICCS: excluded) | not stated | The police statistics and the NSO table do not discuss legal intervention. | [source](https://oja.go.th/TH/download/18472) |
 
@@ -547,7 +547,7 @@ Sources: [NSO statistics and indicators](https://www.nso.go.th/nsoweb/nso/statis
 |---|---|---|---|
 | Murder: completed intentional killing | counted | The indicator is 'registered intentional murders and attempted murders' (qasddan odam o'ldirish va o'ldirishga suiqasd holatlari; Russian: умышленные убийства и покушения на убийства), indicator 2.04.09.0036. | [source](https://api.siat.stat.uz/media/uploads/sdmx/sdmx_data_807.pdf) |
 | Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | not stated | The indicator's metadata name only intentional killing and attempts; which provisions of the Criminal Code (provoked killing, excess of self-defence, infanticide) are counted as intentional killing is not stated. | [source](https://api.siat.stat.uz/media/uploads/sdmx/sdmx_data_807.pdf) |
-| Attempted killings (ICCS: separate category, excluded) | counted | Stated in the indicator's own name; flag includes_attempts. |  |
+| Attempted killings (ICCS: separate category, excluded) | counted | Stated in the indicator's own name; flag includes_attempts. | see the sources below |
 | Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not counted | The indicator counts intentional killings ('умышленные'): negligent killings are not part of it. | [source](https://api.siat.stat.uz/media/uploads/sdmx/sdmx_data_807.pdf) |
 | Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not stated | The metadata mention neither suicide nor abortion. | [source](https://api.siat.stat.uz/media/uploads/sdmx/sdmx_data_807.pdf) |
 | Legal intervention, justifiable homicide (ICCS: excluded) | not stated | The metadata do not discuss legal intervention. | [source](https://api.siat.stat.uz/media/uploads/sdmx/sdmx_data_807.pdf) |
@@ -573,12 +573,12 @@ Sources: [National Statistics Committee open data](https://stat.uz); [Statistics
 
 | Element | Treatment | What the source says | |
 |---|---|---|---|
-| Murder: completed intentional killing | counted |  |  |
-| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | partly counted | Eurostat's wording lists manslaughter among the exclusions, while the ICCS itself includes VOLUNTARY manslaughter and excludes involuntary manslaughter: the national treatment decides (see the flag 'd'). |  |
-| Attempted killings (ICCS: separate category, excluded) | not counted | Attempted homicide is a separate category (ICCS0102). |  |
-| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not counted |  |  |
-| Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not counted | Suicide is not part of the series. |  |
-| Legal intervention, justifiable homicide (ICCS: excluded) | not counted | Death due to legal intervention and justifiable homicide in self-defence are excluded; serious assault leading to death and terrorist attacks are included. |  |
+| Murder: completed intentional killing | counted | The series is ICCS0101 Intentional homicide, the number of offences supplied by each country's police and statistical authorities. | [source](https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table) |
+| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | partly counted | Eurostat's wording lists manslaughter among the exclusions, while the ICCS itself includes VOLUNTARY manslaughter and excludes involuntary manslaughter: the national treatment decides (see the flag 'd'). | [source](https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table) |
+| Attempted killings (ICCS: separate category, excluded) | not counted | Attempted homicide is a separate category (ICCS0102). | [source](https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table) |
+| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not counted | Non-intentional homicide is a separate category of the ICCS (ICCS0103) and is not part of ICCS0101. | [source](https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table) |
+| Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not counted | Suicide is not part of the series. | [source](https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table) |
+| Legal intervention, justifiable homicide (ICCS: excluded) | not counted | Death due to legal intervention and justifiable homicide in self-defence are excluded; serious assault leading to death and terrorist attacks are included. | [source](https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table) |
 
 - Counting and recording rules differ between countries (when an offence is counted, how several victims are treated), so rates are not strictly comparable across countries.
 - The unit is the offence, not the victim.
@@ -598,12 +598,12 @@ Sources: [Eurostat crim_gen_reg](https://ec.europa.eu/eurostat/databrowser/view/
 
 | Element | Treatment | What the source says | |
 |---|---|---|---|
-| Murder: completed intentional killing | counted |  |  |
-| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | partly counted | As for the regional series. |  |
-| Attempted killings (ICCS: separate category, excluded) | not counted |  |  |
-| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not counted |  |  |
-| Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not counted |  |  |
-| Legal intervention, justifiable homicide (ICCS: excluded) | not counted |  |  |
+| Murder: completed intentional killing | counted | The series is the number of intentional homicides in the city, as supplied by each country's police and statistical authorities. | [source](https://ec.europa.eu/eurostat/databrowser/view/crim_hom_ocit/default/table) |
+| Manslaughter (ICCS includes VOLUNTARY manslaughter, excludes involuntary) | partly counted | As for the regional series. | [source](https://ec.europa.eu/eurostat/databrowser/view/crim_hom_ocit/default/table) |
+| Attempted killings (ICCS: separate category, excluded) | not counted | As for the regional series: attempted homicide is a separate category (ICCS0102). | [source](https://ec.europa.eu/eurostat/databrowser/view/crim_hom_ocit/default/table) |
+| Non-intentional or negligent deaths, incl. traffic (ICCS: excluded) | not counted | As for the regional series: non-intentional homicide is a separate category (ICCS0103). | [source](https://ec.europa.eu/eurostat/databrowser/view/crim_hom_ocit/default/table) |
+| Other deaths outside 0101: suicide, abortion, concealment of birth (ICCS: excluded) | not counted | As for the regional series: suicide is not part of the series. | [source](https://ec.europa.eu/eurostat/databrowser/view/crim_hom_ocit/default/table) |
+| Legal intervention, justifiable homicide (ICCS: excluded) | not counted | As for the regional series: death due to legal intervention and justifiable homicide in self-defence are excluded. | [source](https://ec.europa.eu/eurostat/databrowser/view/crim_hom_ocit/default/table) |
 
 - Each jurisdiction reports its largest cities, in general as the city proper or the greater city; the unit type says which.
 - A city above its country's national total is tier C.

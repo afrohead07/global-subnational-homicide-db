@@ -24,7 +24,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import docs_content as C
 
-REVISION = 6
+REVISION = 7
 SHORT = {"murder": "Murder", "manslaughter": "Manslaughter", "attempts": "Attempts", "nonintent": "Non-intentional", "other": "Other", "legal": "Legal"}
 SHORT_STATUS = {"in": "yes", "out": "no", "mixed": "partly", "ns": "n.s."}
 FORBIDDEN = re.compile(r"TO CHECK|CORRECTION|not yet|deferred|to be verified|pending|planned|not been checked|not reached|next place|earlier version|first version|\b20\d\d-\d\d-\d\d\b|typed in|would have to be|are next", re.I)
@@ -122,11 +122,11 @@ def h(x) -> str:
 
 
 def src_md(src: str) -> str:
-    return f"[source]({src.replace(' ', '%20')})" if src.startswith("http") else (src or "")
+    return f"[source]({src.replace(' ', '%20')})" if src.startswith("http") else (src or "see the sources below")
 
 
 def src_html(src: str) -> str:
-    return f"<a href='{h(src)}'>source</a>" if src.startswith("http") else h(src)
+    return f"<a href='{h(src)}'>source</a>" if src.startswith("http") else h(src or "see the sources below")
 
 
 def layers_by_region():
@@ -142,7 +142,7 @@ def md_cell(x: str) -> str:
 def build_md(stats, files, df) -> str:
     R = C.REFERENCE
     L = ["# Definitions: what each series in the database counts", "",
-         f"How each source in the database defines and counts homicide, compared with the UNODC definition of intentional homicide. Every statement gives the page or file it comes from. "
+         f"How each source in the database defines and counts homicide, compared with the UNODC definition of intentional homicide. Where a statement rests on a specific page or file, its address is given next to it; the sources of every layer are listed under its table. "
          f"Built from {', '.join(f.name for f in files)} ({len(df):,} rows, {df['layer'].nunique()} layers).", ""]
     L += ["## 1. Reference definition: UNODC / ICCS 0101", "", f"**{R['name']}**", "", f"> {R['definition']}", "", "Three elements make a killing an intentional homicide:", ""]
     L += [f"- {e}" for e in R["elements"]]
@@ -175,7 +175,7 @@ def build_md(stats, files, df) -> str:
             L += ["", "| Element | Treatment | What the source says | |", "|---|---|---|---|"]
             for e, label in C.ELEMENTS:
                 st = d["elements"][e]
-                L.append(f"| {md_cell(label)} | {C.STATUS[st[0]][0]} | {md_cell(st[2])} | {src_md(st[3]) if len(st) > 3 else ''} |")
+                L.append(f"| {md_cell(label)} | {C.STATUS[st[0]][0]} | {md_cell(st[2])} | {src_md(st[3] if len(st) > 3 else '')} |")
             L.append("")
             for n in d.get("notes", []):
                 L.append(f"- {n}")
@@ -197,7 +197,7 @@ def build_html(stats, files, df) -> str:
     R = C.REFERENCE
     P = [f"<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Definitions: what each series in the database counts</title><style>{CSS}</style></head><body>"]
     P.append("<h1>Definitions: what each series in the database counts</h1>")
-    P.append(f"<p>How each source in the database defines and counts homicide, compared with the UNODC definition of intentional homicide. Every statement gives the page or file it comes from. "
+    P.append(f"<p>How each source in the database defines and counts homicide, compared with the UNODC definition of intentional homicide. Where a statement rests on a specific page or file, its address is given next to it; the sources of every layer are listed under its table. "
              f"Built from {h(', '.join(f.name for f in files))} ({len(df):,} rows, {df['layer'].nunique()} layers).</p>")
     P.append("<h2>1. Reference definition: UNODC / ICCS 0101</h2>")
     P.append(f"<p><strong>{h(R['name'])}</strong></p><blockquote>{h(R['definition'])}</blockquote><p>Three elements make a killing an intentional homicide:</p><ul>" + "".join(f"<li>{h(e)}</li>" for e in R["elements"]) + "</ul>")
@@ -225,7 +225,7 @@ def build_html(stats, files, df) -> str:
             P.append("<div class='wrap'><table><tr><th>Element</th><th>Treatment</th><th>What the source says</th><th></th></tr>")
             for e, label in C.ELEMENTS:
                 st = d["elements"][e]
-                P.append(f"<tr><td>{h(label)}</td><td>{h(C.STATUS[st[0]][0])}</td><td>{h(st[2])}</td><td>{src_html(st[3]) if len(st) > 3 else ''}</td></tr>")
+                P.append(f"<tr><td>{h(label)}</td><td>{h(C.STATUS[st[0]][0])}</td><td>{h(st[2])}</td><td>{src_html(st[3] if len(st) > 3 else '')}</td></tr>")
             P.append("</table></div>")
             if d.get("notes"):
                 P.append("<ul>" + "".join(f"<li>{h(n)}</li>" for n in d["notes"]) + "</ul>")

@@ -16,6 +16,6 @@ Legal code: https://creativecommons.org/licenses/by/4.0/legalcode
 ## The official sources
 
 The figures are published by national statistical offices, police services and health ministries. The licence above covers the selection, harmonisation, structure, derived fields and documentation of this
-compilation. It does not change the terms of the original sources, which apply to their content: every row names its source in `source_url`.
+compilation. It does not change the terms of the original sources, which apply to their content: every row names its sources in `source_homicide` and `source_population`.
 
 The code (`Pipelines/**/*.py`) is licensed separately under the MIT licence in `LICENSE`.

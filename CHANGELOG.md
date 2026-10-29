@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 - 2026-10-29
+
+Corrections to the documentation: the column names cited in the README and the licence notice, and the source addresses of the definitions document. In the Americas layer, a unit whose population series breaks (a change above 25% in one year) is now tier C throughout.
+
 ## 1.0.0 - 2026-10-29
 
 First public release.

@@ -515,7 +515,7 @@ LAYERS = {
         'time': 'Calendar year of FILING: the Police Headquarters compiles the statistics from the cases filed at police stations; over 400 of the 1,930 murder cases recorded in the first half of 2025 were filed for incidents of earlier years.',
         'time_ev': 'D',
         'elements': {
-            'murder': ('in', 'D', '', ''),
+            'murder': ('in', 'D', "The series is the 'Murder' category of the Police Headquarters' crime statistics (murder cases filed).", ''),
             'manslaughter': (
                 'ns',
                 'N',
@@ -582,7 +582,12 @@ LAYERS = {
         'time': 'Calendar year.',
         'time_ev': 'D',
         'elements': {
-            'murder': ('in', 'D', '', ''),
+            'murder': (
+                'in',
+                'D',
+                "The series is the source's own homicide category: 'Homicide' in the Hong Kong Police Force tables and the 杀人 line of the yearbooks.",
+                '',
+            ),
             'manslaughter': ('in', 'D', "HKPF's 'Homicide' is murder plus manslaughter.", ''),
             'attempts': (
                 'out',
@@ -862,7 +867,7 @@ LAYERS = {
         'time': 'Calendar year; only full-year blocks are used (blocks titled with a month or quarter are excluded).',
         'time_ev': 'D',
         'elements': {
-            'murder': ('in', 'D', '', ''),
+            'murder': ('in', 'D', "The series is the 'Murder' column of the provincial police reports.", ''),
             'manslaughter': (
                 'ns',
                 'N',
@@ -1061,7 +1066,12 @@ LAYERS = {
         'time': 'Calendar year (2023 to 2025).',
         'time_ev': 'D',
         'elements': {
-            'murder': ('in', 'D', '', ''),
+            'murder': (
+                'in',
+                'D',
+                "The series is 'Homicide, cases known to the police' of the statistical yearbook, taken to be the police item 故意殺人 (see the note below).",
+                '',
+            ),
             'manslaughter': (
                 'out',
                 'D',
@@ -1125,7 +1135,7 @@ LAYERS = {
         'time': 'Calendar year (2017 to 2022).',
         'time_ev': 'D',
         'elements': {
-            'murder': ('in', 'D', '', ''),
+            'murder': ('in', 'D', "The series is the 'Murder (reported)' count of the National Statistical Office.", ''),
             'manslaughter': (
                 'out',
                 'D',
@@ -1247,21 +1257,41 @@ LAYERS = {
         'time': 'Calendar year.',
         'time_ev': 'S',
         'elements': {
-            'murder': ('in', 'S', '', ''),
+            'murder': (
+                'in',
+                'S',
+                "The series is ICCS0101 Intentional homicide, the number of offences supplied by each country's police and statistical authorities.",
+                'https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table',
+            ),
             'manslaughter': (
                 'mixed',
                 'S',
                 "Eurostat's wording lists manslaughter among the exclusions, while the ICCS itself includes VOLUNTARY manslaughter and excludes involuntary manslaughter: the national treatment decides (see the flag 'd').",
-                '',
+                'https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table',
             ),
-            'attempts': ('out', 'S', 'Attempted homicide is a separate category (ICCS0102).', ''),
-            'nonintent': ('out', 'S', '', ''),
-            'other': ('out', 'S', 'Suicide is not part of the series.', ''),
+            'attempts': (
+                'out',
+                'S',
+                'Attempted homicide is a separate category (ICCS0102).',
+                'https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table',
+            ),
+            'nonintent': (
+                'out',
+                'S',
+                'Non-intentional homicide is a separate category of the ICCS (ICCS0103) and is not part of ICCS0101.',
+                'https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table',
+            ),
+            'other': (
+                'out',
+                'S',
+                'Suicide is not part of the series.',
+                'https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table',
+            ),
             'legal': (
                 'out',
                 'S',
                 'Death due to legal intervention and justifiable homicide in self-defence are excluded; serious assault leading to death and terrorist attacks are included.',
-                '',
+                'https://ec.europa.eu/eurostat/databrowser/view/crim_gen_reg/default/table',
             ),
         },
         'verdict': 'Close',
@@ -1289,12 +1319,37 @@ LAYERS = {
         'time': 'Calendar year.',
         'time_ev': 'S',
         'elements': {
-            'murder': ('in', 'S', '', ''),
-            'manslaughter': ('mixed', 'S', 'As for the regional series.', ''),
-            'attempts': ('out', 'S', '', ''),
-            'nonintent': ('out', 'S', '', ''),
-            'other': ('out', 'S', '', ''),
-            'legal': ('out', 'S', '', ''),
+            'murder': (
+                'in',
+                'S',
+                "The series is the number of intentional homicides in the city, as supplied by each country's police and statistical authorities.",
+                'https://ec.europa.eu/eurostat/databrowser/view/crim_hom_ocit/default/table',
+            ),
+            'manslaughter': ('mixed', 'S', 'As for the regional series.', 'https://ec.europa.eu/eurostat/databrowser/view/crim_hom_ocit/default/table'),
+            'attempts': (
+                'out',
+                'S',
+                'As for the regional series: attempted homicide is a separate category (ICCS0102).',
+                'https://ec.europa.eu/eurostat/databrowser/view/crim_hom_ocit/default/table',
+            ),
+            'nonintent': (
+                'out',
+                'S',
+                'As for the regional series: non-intentional homicide is a separate category (ICCS0103).',
+                'https://ec.europa.eu/eurostat/databrowser/view/crim_hom_ocit/default/table',
+            ),
+            'other': (
+                'out',
+                'S',
+                'As for the regional series: suicide is not part of the series.',
+                'https://ec.europa.eu/eurostat/databrowser/view/crim_hom_ocit/default/table',
+            ),
+            'legal': (
+                'out',
+                'S',
+                'As for the regional series: death due to legal intervention and justifiable homicide in self-defence are excluded.',
+                'https://ec.europa.eu/eurostat/databrowser/view/crim_hom_ocit/default/table',
+            ),
         },
         'verdict': 'Close',
         'verdict_ev': 'S',

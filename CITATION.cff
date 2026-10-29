@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this database, please cite it as below."
 type: dataset
 title: "Global Subnational Homicide Database"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-10-29
 authors:
   - family-names: Feussi

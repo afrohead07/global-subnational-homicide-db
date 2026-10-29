@@ -92,8 +92,8 @@ A = reconciled with an independent confirmation and a recent denominator; B = a 
 | reliability_tier | rows | countries | units | share_of_rows |
 |---|---|---|---|---|
 | A | 11,835 | 39 | 1,454 | 40.7 |
-| B | 15,927 | 72 | 1,678 | 54.8 |
-| C | 1,313 | 11 | 246 | 4.5 |
+| B | 15,447 | 72 | 1,638 | 53.1 |
+| C | 1,793 | 17 | 276 | 6.2 |
 
 ## Indicator type
 
@@ -159,14 +159,14 @@ A = reconciled with an independent confirmation and a recent denominator; B = a 
 | Americas | Ecuador | 486 | 34 | 2010 | 2024 | 15 | B | admin1, city | igarape | 15 |
 | Americas | Dominican Republic | 419 | 37 | 2007 | 2023 | 17 | B, C | admin1, city | igarape | 17 |
 | Americas | Honduras | 374 | 20 | 2005 | 2024 | 20 | B, C | admin1, city | igarape | 20 |
-| Americas | Canada | 370 | 42 | 2013 | 2024 | 12 | B | admin1, city | igarape | 12 |
+| Americas | Canada | 370 | 42 | 2013 | 2024 | 12 | B, C | admin1, city | igarape | 12 |
 | Americas | Venezuela (Bolivarian Republic of) | 348 | 41 | 2000 | 2024 | 20 | B, C | admin1, city | igarape | 25 |
-| Americas | Paraguay | 278 | 21 | 2006 | 2023 | 17 | B | admin1, city | igarape | 18 |
+| Americas | Paraguay | 278 | 21 | 2006 | 2023 | 17 | B, C | admin1, city | igarape | 18 |
 | Americas | Jamaica | 250 | 11 | 2000 | 2024 | 25 | B | admin1, city | igarape | 25 |
-| Americas | Nicaragua | 238 | 18 | 2006 | 2022 | 17 | B | admin1, city | igarape | 17 |
-| Americas | Panama | 229 | 11 | 2002 | 2024 | 23 | B | admin1, city | igarape | 23 |
-| Americas | Peru | 228 | 38 | 2019 | 2024 | 6 | B | admin1, city | igarape | 6 |
-| Americas | Bolivia (Plurinational State of) | 203 | 17 | 2010 | 2024 | 15 | B | admin1, city | igarape | 15 |
+| Americas | Nicaragua | 238 | 18 | 2006 | 2022 | 17 | B, C | admin1, city | igarape | 17 |
+| Americas | Panama | 229 | 11 | 2002 | 2024 | 23 | B, C | admin1, city | igarape | 23 |
+| Americas | Peru | 228 | 38 | 2019 | 2024 | 6 | B, C | admin1, city | igarape | 6 |
+| Americas | Bolivia (Plurinational State of) | 203 | 17 | 2010 | 2024 | 15 | B, C | admin1, city | igarape | 15 |
 | Americas | Chile | 189 | 27 | 2018 | 2024 | 7 | B | admin1, city | igarape | 7 |
 | Americas | El Salvador | 188 | 17 | 2010 | 2021 | 12 | B | admin1, city | igarape | 12 |
 | Americas | Costa Rica | 126 | 9 | 2011 | 2024 | 14 | B | admin1, city | igarape | 14 |

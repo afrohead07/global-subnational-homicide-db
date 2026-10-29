@@ -278,6 +278,15 @@ def check_release_files():
         (fail if miss else ok)("release", ("CITATION.cff lacks " + ", ".join(miss)) if miss else "CITATION.cff has version, title and authors")
         if re.search(r"TODO|TBD|XXX|<[^>]+>|your name|example\.com", t, re.I):
             fail("release", "CITATION.cff still contains a placeholder")
+    g = ROOT / "Data" / "Output" / "global_master_panel.csv"
+    if g.exists():
+        cols = set(pd.read_csv(g, nrows=0).columns) | {"includes_attempts", "includes_manslaughter", "counts_victims"}
+        for name in ("README.md", "LICENSE-DATA.md", "Pipelines/FORMAT.md"):
+            p = ROOT / name
+            if p.exists():
+                toks = {t for t in re.findall(r"`([a-z][a-z0-9]*(?:_[a-z0-9]+)+)`", p.read_text(encoding="utf-8", errors="replace"))}
+                unknown = sorted(t for t in toks if t not in cols and not t.endswith(("_panel", "_pipeline")))
+                (warn if unknown else ok)("release", f"{name} cites names that are not columns of the global panel: {', '.join(unknown)}" if unknown else f"every column name cited in {name} exists in the global panel")
     rd = ROOT / "README.md"
     if rd.exists():
         t = rd.read_text(encoding="utf-8", errors="replace")

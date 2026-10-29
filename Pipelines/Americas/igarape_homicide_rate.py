@@ -271,6 +271,17 @@ def cmd_build(inspect_only: bool):
     gap = out.groupby("igarape_id")["year"].diff()
     out["flag_population_break"] = (pct.abs() > 0.25) & (gap == 1)
     out.loc[out["flag_population_break"], "data_notes"] += "; the compiler's population changes by more than 25% from the previous year (a break in the series): rates across it are not comparable"
+    # DECISION: a break means that the denominators on its two sides do not describe the same area, and either side can be the wrong one (for example a department whose early population is smaller than
+    # a city inside it). So the WHOLE series of a unit with a break is tier C, not only the year that follows the jump; the break year alone keeps flag_population_break.
+    brk = out.loc[out["flag_population_break"]].groupby("igarape_id")["year"].agg(lambda y: ", ".join(str(int(v)) for v in sorted(y)))
+    for uid, yrs in brk.items():
+        m = out["igarape_id"] == uid
+        out.loc[m, "reliability_tier"] = "C"
+        out.loc[m, "tier_reason"] = out.loc[m, "tier_reason"].map(lambda t: (t + "; " if t else "") + f"the compiler's population series for this unit breaks in {yrs}")
+        out.loc[m, "validation"] += f"; FAILED: the compiler's population for this unit changes by more than 25% in {yrs}, so the denominators before and after do not describe the same area and no rate of the series is reliable"
+        m2 = m & ~out["flag_population_break"]
+        out.loc[m2, "data_notes"] += f"; the unit's population series has a break above 25% in {yrs}: rates across it are not comparable"
+    print(f"[population breaks] {len(brk)} unit(s) have a break in their population series; all their rows are tier C")
     key = ["country", "parent_unit", "unit"]
     clash = out.groupby(key)["igarape_id"].nunique()
     clash = clash[clash > 1]

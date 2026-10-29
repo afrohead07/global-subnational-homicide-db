@@ -111,8 +111,8 @@ Author: Yannick Feussi ([@afrohead07](https://github.com/afrohead07)).
   denominator or an official estimate or census, named in `population_method`.
 - `reliability_tier`: A = reconciled, independently confirmed and a recent denominator (age of 3.5 years or less); B = a documented weakness; C = a failed hard check or a proxy. The reason is in `validation`.
 - `year` is the calendar year unless `year_basis` says financial year (then it is the start year).
-- Rates are comparable only within one `comparable_within` key. Rows of different admin levels are never added (a state and its districts are the same people). A victim count, a case count and a proxy are not
-  compared without reading the notes in `Docs/DEFINITIONS.md`. Counts below 10 carry `flag_low_count`; a population that jumps (a new census) carries `flag_population_break`.
+- `homicide_rate_per_100k` is `homicide_cases` / `population` x 100,000. Rates are comparable only within one `comparable_within` key. Rows of different admin levels are never added (a state and its districts are the same people). A victim count, a case count and a proxy are not
+  compared without reading the notes in `Docs/DEFINITIONS.md`. Counts below 10 carry `flag_low_count`; a year far outside the unit's own series carries `flag_outlier_year`; the Kenya and South Africa files add `flag_population_break` where the denominator changes basis.
 
 ## Layout
 - `Pipelines/<Region>/<country>_homicide_rate.py`: one script per country or source layer. `inspect` shows what a source contains; `build` downloads it into `Data/Raw/<Region>/<Country>/` (dated), reconciles it and
@@ -125,23 +125,26 @@ Author: Yannick Feussi ([@afrohead07](https://github.com/afrohead07)).
 ```
 python -m pip install -r requirements.txt
 cd Pipelines
-python refresh_all.py --reuse            # every country script, then the panels, the inventory and the documentation (--reuse: use the saved downloads; --fresh: download again)
+python refresh_all.py                    # every country script, then the panels, the inventory and the documentation (a source is downloaded when no saved copy exists; --fresh downloads every source again)
 python Africa/kenya_homicide_rate.py build        # one country
 python Africa/africa_master_panel.py              # one regional panel
 python global_master_panel.py                     # the world panel
 python release_check.py                           # the checks to run before publishing
 ```
 
+The first run downloads each source into `Data/Raw/<Region>/<Country>/` (dated files, which are not part of the repository); a full run takes about half an hour once the downloads are saved, and longer the first time. When a site refuses automated downloads or changes its page, the script says which file to save by hand (named `manual_*`). The Lesotho script reads its census table from `Data/Raw/Africa/Lesotho/manual_census2016.pdf`, which is part of the repository. Tested with Python 3.12.
+
 ## Limits of the data
 - Police-recorded series reflect reporting and recording, not only violence; health-registry series reflect cause-of-death certification (South Africa's registry covers about a third of police-recorded murders).
 - Several denominators are old or projected (Nigeria: a projection of the 2006 census; Lesotho: the 2016 census; Kenya: the 2009 census up to 2017 and the 2019 census from 2021).
-- The Americas are covered through the Igarape Institute's Homicide Monitor, a compilation in which every row cites its official source (`igarape_source_1`, `igarape_source_2`); those rows are never tier A.
+- The countries of the Americas are covered through the Igarape Institute's Homicide Monitor, a compilation in which every row cites its official source (`igarape_source_1`, `igarape_source_2`); those rows are never tier A, and a unit whose population series breaks (a change above 25% in one year) is tier C throughout.
+- Coverage is uneven across regions and years; `Data/Output/project_inventory.md` lists the units and years of every country.
 - Sources that publish no sub-national homicide figures were examined and not used: Tunisia, Mozambique, Sierra Leone, Zimbabwe, Uganda, Botswana.
 - South Australia and New Zealand are not covered.
 
 ## Licence and citation
 Code: MIT (`LICENSE`). Data and documentation: Creative Commons Attribution 4.0 (`LICENSE-DATA.md`). How to cite the database: `CITATION.cff`. The figures come from the official sources named in every row
-(`source_url`); the terms of those sources apply to their content.
+(`source_homicide`, `source_population`); the terms of those sources apply to their content.
 """
 
 
