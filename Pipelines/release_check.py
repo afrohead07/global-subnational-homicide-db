@@ -229,17 +229,40 @@ def check_size():
         warn("size", "above 25 MB: " + "; ".join(mid))
 
 
+def find_git():
+    """git on the PATH, or in the folders where the Windows installer puts it (a PowerShell window opened before the installation does not know the PATH)."""
+    g = shutil.which("git")
+    if g:
+        return g
+    for c in (r"C:\\Program Files\\Git\\cmd\\git.exe", r"C:\\Program Files (x86)\\Git\\cmd\\git.exe", str(Path.home() / "AppData" / "Local" / "Programs" / "Git" / "cmd" / "git.exe")):
+        if Path(c).exists():
+            return c
+    return None
+
+
 def check_git():
-    if not shutil.which("git") or not (ROOT / ".git").exists():
-        warn("git", "the folder is not a git repository yet (git init) or git is not installed")
+    if not (ROOT / ".git").exists():
+        warn("git", "the folder is not a git repository yet: run `git init -b main` in the repository folder")
         return
-    rc, st = run(["git", "-C", str(ROOT), "status", "--porcelain"])
+    git = find_git()
+    if git is None:
+        warn("git", "the repository exists but this program cannot find git: open a new PowerShell window (one opened before Git was installed does not know it) and run this check again")
+        return
+    rc, st = run([git, "-C", str(ROOT), "status", "--porcelain"])
     n = len([ln for ln in st.splitlines() if ln.strip()])
-    ok("git", "no uncommitted change") if n == 0 else warn("git", f"{n} uncommitted change(s)")
-    for rel, expect in (("Data/Raw/Africa/Kenya/x.csv", True), ("Data/Raw/Africa/Kenya/manual_x.csv", False), ("venv/x.py", True), ("_archive/x.py", True), ("Pipelines/Africa/kenya_homicide_rate.csv", False)):
-        rc, _ = run(["git", "-C", str(ROOT), "check-ignore", "-q", rel])
+    ok("git", "no uncommitted change") if n == 0 else warn("git", f"{n} uncommitted change(s): commit them before tagging a release")
+    rc, rem = run([git, "-C", str(ROOT), "remote", "-v"])
+    (ok if rem.strip() else warn)("git", "remote: " + rem.strip().splitlines()[0] if rem.strip() else "no remote is set (git remote add origin <address>)")
+    rc, tags = run([git, "-C", str(ROOT), "tag", "--list"])
+    (ok if tags.strip() else warn)("git", "tags: " + ", ".join(tags.split()) if tags.strip() else "no release tag yet (git tag -a v1.0.0 -m ...)")
+    for rel, expect in (("Data/Raw/Africa/Kenya/x.csv", True), ("Data/Raw/Africa/Kenya/manual_x.csv", False), ("venv/x.py", True), ("_archive/x.py", True), ("Data/Output/refresh_log.txt", True),
+                        ("Pipelines/Africa/kenya_homicide_rate.csv", False), ("Data/Output/global_master_panel.csv", False)):
+        rc, _ = run([git, "-C", str(ROOT), "check-ignore", "-q", rel])
         ignored = rc == 0
         (ok if ignored == expect else fail)("git", f"{rel} is {'ignored' if ignored else 'tracked'} as intended" if ignored == expect else f"{rel} is {'ignored' if ignored else 'not ignored'}, expected the opposite")
+    rc, big = run([git, "-C", str(ROOT), "ls-files", "-z"])
+    over = [f for f in big.split("\0") if f and (ROOT / f).is_file() and (ROOT / f).stat().st_size > 50 * MB]
+    (fail if over else ok)("git", ("tracked files above 50 MB: " + ", ".join(over)) if over else "no tracked file above 50 MB")
 
 
 def check_release_files():

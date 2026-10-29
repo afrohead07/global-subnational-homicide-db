@@ -1436,7 +1436,7 @@ LAYERS = {
         'notes': [
             'Police victims and health deaths are compared per state and year (a diagnostic with a band, since deaths are registered by year of registration).',
             'The ABS national table is not an exact sum of the states; the difference is written into the rows.',
-            'The ABS says the 2010 publication marked a break in series (changes in police recording practices, a revised offence classification and the National Crime Recording Standard) and that data published before it should not be compared with later data.',
+            'The ABS says the 2010 publication marked a break in series (changes in police recording practices, a revised offence classification and the National Crime Recording Standard) and that data published before it should not be compared with later data. The ABS footnote on the category, "Homicide excludes driving causing death", is identical in every release from 1993 to 2025, and the rows of the years before the break carry the series-break note in `data_notes`.',
         ],
         'sources': [
             ('ABS Recorded Crime - Victims', 'https://www.abs.gov.au/statistics/people/crime-and-justice/recorded-crime-victims'),
