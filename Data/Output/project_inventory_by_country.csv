@@ -1,0 +1,79 @@
+﻿region,country,rows,units,first_year,last_year,distinct_years,tiers,admin_levels,layers,span_years
+Africa,Kenya,188,47,2015,2021,4,C,admin1,kenya,7
+Africa,South Africa,117,9,2013,2025,13,B,admin1,south_africa,13
+Africa,Tanzania,62,31,2024,2025,2,B,admin1,tanzania,2
+Africa,Lesotho,45,9,2015,2022,5,B,admin1,lesotho,8
+Africa,Nigeria,37,37,2017,2017,1,B,admin1,nigeria,1
+Americas,Argentina,1475,67,2000,2024,24,B,"admin1, city",igarape,25
+Americas,United States of America,1317,136,2010,2024,15,"B, C","admin1, city",igarape,15
+Americas,Colombia,1270,57,2000,2024,25,B,"admin1, city",igarape,25
+Americas,Mexico,1208,127,2015,2024,10,B,"admin1, city",igarape,10
+Americas,Brazil,1192,149,2017,2024,8,B,"admin1, city",igarape,8
+Americas,Guatemala,621,27,2000,2024,25,B,"admin1, city",igarape,25
+Americas,Ecuador,486,34,2010,2024,15,B,"admin1, city",igarape,15
+Americas,Dominican Republic,419,37,2007,2023,17,"B, C","admin1, city",igarape,17
+Americas,Honduras,374,20,2005,2024,20,"B, C","admin1, city",igarape,20
+Americas,Canada,370,42,2013,2024,12,B,"admin1, city",igarape,12
+Americas,Venezuela (Bolivarian Republic of),348,41,2000,2024,20,"B, C","admin1, city",igarape,25
+Americas,Paraguay,278,21,2006,2023,17,B,"admin1, city",igarape,18
+Americas,Jamaica,250,11,2000,2024,25,B,"admin1, city",igarape,25
+Americas,Nicaragua,238,18,2006,2022,17,B,"admin1, city",igarape,17
+Americas,Panama,229,11,2002,2024,23,B,"admin1, city",igarape,23
+Americas,Peru,228,38,2019,2024,6,B,"admin1, city",igarape,6
+Americas,Bolivia (Plurinational State of),203,17,2010,2024,15,B,"admin1, city",igarape,15
+Americas,Chile,189,27,2018,2024,7,B,"admin1, city",igarape,7
+Americas,El Salvador,188,17,2010,2021,12,B,"admin1, city",igarape,12
+Americas,Costa Rica,126,9,2011,2024,14,B,"admin1, city",igarape,14
+Americas,Uruguay,119,9,2011,2024,14,"B, C","admin1, city",igarape,14
+Americas,Trinidad and Tobago,67,7,2015,2024,10,B,"admin1, city",igarape,10
+Americas,Guyana,40,4,2015,2024,10,"B, C","admin1, city",igarape,10
+Americas,Puerto Rico,23,1,2000,2024,23,B,city,igarape,25
+Americas,The Bahamas,13,1,2012,2024,13,B,city,igarape,13
+Americas,Belize,10,2,2013,2024,8,B,admin1,igarape,12
+Americas,Haiti,1,1,2021,2021,1,B,city,igarape,1
+Asia,Thailand,462,77,2017,2022,6,"A, B",admin1,thailand,6
+Asia,Malaysia,317,81,2020,2023,4,"A, B","admin1, admin2",malaysia,4
+Asia,Uzbekistan,224,14,2010,2025,16,B,admin1,uzbekistan,16
+Asia,Pakistan,222,128,2024,2025,2,"A, B","admin1, admin2, city",pakistan,2
+Asia,Japan,188,47,2022,2025,4,A,admin1,japan,4
+Asia,India,171,19,2016,2024,9,B,city,india,9
+Asia,South Korea,72,72,2025,2025,1,B,"admin1, admin2",south_korea,1
+Asia,Taiwan,63,21,2023,2025,3,"A, B",admin1,taiwan,3
+Asia,China,24,3,2014,2024,11,"A, B",admin1,china,11
+Asia,Singapore,15,1,2011,2025,15,B,city,singapore,15
+Asia,Bangladesh,8,8,2025,2025,1,B,city,bangladesh,1
+Europe,Germany,3119,322,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Italy,1680,106,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Türkiye,1334,79,2008,2024,17,"A, B",admin2,eurostat,17
+Europe,France,913,101,2010,2024,15,"A, B","admin2, city","eurostat, eurostat_cities",15
+Europe,Spain,900,54,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,United Kingdom,546,42,2012,2024,13,B,police_unit,united_kingdom,13
+Europe,Greece,524,32,2008,2024,17,"A, B, C","admin2, city","eurostat, eurostat_cities",17
+Europe,Belgium,509,32,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Austria,474,29,2008,2024,17,A,"admin2, city","eurostat, eurostat_cities",17
+Europe,Bulgaria,460,29,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Portugal,433,38,2008,2024,17,"A, B, C","admin2, city","eurostat, eurostat_cities",17
+Europe,Romania,430,43,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Finland,316,26,2008,2024,17,"A, B, C","admin2, city","eurostat, eurostat_cities",17
+Europe,Switzerland,304,20,2009,2024,16,"A, B","admin2, city","eurostat, eurostat_cities",16
+Europe,Norway,270,32,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Poland,228,74,2008,2024,14,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Serbia,178,23,2017,2024,8,"A, B",admin2,eurostat,8
+Europe,Hungary,174,21,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Denmark,173,11,2008,2024,17,A,"admin2, city","eurostat, eurostat_cities",17
+Europe,Slovakia,151,9,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Slovenia,137,9,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Albania,129,10,2012,2024,13,"A, B",admin2,eurostat,13
+Europe,Lithuania,129,11,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Croatia,115,29,2018,2024,7,"A, B",admin2,eurostat,7
+Europe,Czechia,113,15,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Latvia,91,10,2008,2024,17,"A, B, C","admin2, city","eurostat, eurostat_cities",17
+Europe,Ireland,78,8,2015,2024,10,"A, B",admin2,eurostat,10
+Europe,Estonia,48,6,2012,2024,13,"A, B","admin2, city","eurostat, eurostat_cities",13
+Europe,Iceland,34,2,2008,2024,17,"A, B",admin2,eurostat,17
+Europe,Malta,28,2,2008,2024,17,"A, B","admin2, city","eurostat, eurostat_cities",17
+Europe,Cyprus,24,2,2008,2022,15,"A, B","admin2, city","eurostat, eurostat_cities",15
+Europe,Luxembourg,19,2,2008,2022,15,A,"admin2, city","eurostat, eurostat_cities",15
+Europe,Montenegro,15,1,2008,2022,15,A,admin2,eurostat,15
+Europe,Netherlands,14,1,2008,2024,14,B,city,eurostat_cities,17
+Oceania,Australia,1488,88,1993,2025,33,"A, B","admin1, admin2, police_unit","new_south_wales, queensland, states, victoria, western_australia",33

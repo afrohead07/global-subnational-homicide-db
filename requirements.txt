@@ -1,0 +1,14 @@
+# python -m pip install -r requirements.txt   (Python 3.12, pandas 3.x)
+pandas>=3.0
+numpy
+requests
+beautifulsoup4
+openpyxl
+python-calamine
+pdfplumber
+pypdf
+pymupdf
+truststore
+korean-romanizer
+# optical character recognition, used only by Pipelines/Asia/china_homicide_rate.py
+rapidocr-onnxruntime

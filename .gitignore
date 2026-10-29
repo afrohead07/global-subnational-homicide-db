@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/
+
+# operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# what tidy_repo.py moved aside, and the log of the last refresh
+_archive/
+Data/Output/refresh_log.txt
+
+# raw downloads are re-created by the pipelines; keep only the files saved by hand (manual_*)
+Data/Raw/**
+!Data/Raw/**/
+!Data/Raw/**/manual_*

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this database, please cite it as below."
+type: dataset
+title: "Global Subnational Homicide Database"
+version: 1.0.0
+date-released: 2026-10-29
+authors:
+  - family-names: Feussi
+    given-names: Yannick
+repository-code: "https://github.com/afrohead07/global-subnational-homicide-db"
+url: "https://github.com/afrohead07/global-subnational-homicide-db"
+license:
+  - MIT
+  - CC-BY-4.0
+abstract: >-
+  A harmonised panel of homicide counts and rates below the national level: about 29,000 observations for roughly 2,850 provinces, states, counties, districts, cities and police units in 78 countries, 1993 to 2025. Re-runnable pipelines extract the figures from police, statistical-office and health-ministry publications into a common schema, attach population denominators, validate against national totals and independent series, and grade each row by reliability. Every series carries its counting unit, definition flags and time basis, and a companion document compares each source's definition of homicide with the UNODC standard. Built for the Development Data Lab.
+keywords:
+  - homicide
+  - subnational
+  - crime statistics
+  - official statistics
+  - open data
+  - UNODC
+  - ICCS
